@@ -19,14 +19,14 @@
         <div class="row full-height justify-content-center">
             <div class="col-12 text-center align-self-center py-5">
                 <div class="section pb-5 pt-5 pt-sm-2 text-center">
-                    <h6 class="mb-0 pb-3"><span><a href="index.php" class="a-logreg">Login</a></span><span><a href="#"
+                    <h6 class="mb-0 pb-3"><span><a href="login.php" class="a-logreg">Login</a></span><span><a href="#"
                                                                                                               class="a-logreg">Register</a></span>
                     </h6>
                     <div class="card-3d-wrap mx-auto">
                         <div class="card-3d-wrapper">
                             <div class="card-front-reg">
                                 <div class="center-wrap">
-                                    <form method="post">
+                                    <form method="post" action="../../backend/controller/registerctrl.php">
                                         <h4 class="mb-4 pb-3">Register</h4>
                                         <div class="form-group">
                                             <input name="reg-bname" class="form-style" placeholder="Benutzername"
