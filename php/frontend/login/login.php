@@ -1,3 +1,11 @@
+<?php
+if (isset($_GET['success'])) {
+    if ($_GET['success'] == 'erfolgreich_registriert') {
+        echo '<script>alert("Erfolgreich registriert!")</script>';
+    }
+}
+?>
+
 <!doctype html>
 <html lang="en">
 <head>

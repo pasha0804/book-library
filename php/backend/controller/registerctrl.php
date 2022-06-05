@@ -12,37 +12,19 @@ class registerctrl extends registermodel {
             $email = $_POST['reg-email'];
             $pass = $_POST['reg-pass'];
 
-            if (empty($bname) || empty($nname) || empty($vname) || empty($email) || empty($pass)) {
-                echo '<script>alert("Alle Felder müssen ausgefüllt sein!")</script>';
+            if (trim(empty($bname)) || trim(empty($nname)) || trim(empty($vname)) || trim(empty($email)) || trim(empty($pass))) {
+                header('location: ../../frontend/login/register.php?fehler=leer');
                 exit();
             }
 
-            elseif(!preg_match("/^[a-z\d_]{6,}$/i", $bname)) {
-                echo "<script> alert('Error (Benutzername): Nur 6-45 Zeichen, a-z bzw. A-Z, Zahlen und _ erlaubt!')</script>";
+            if(!preg_match("/^[a-z\d_]{6,}$/i", $bname) && !preg_match("/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]/", $nname) && !preg_match("/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]/", $vname) && !preg_match("/(?=^.{6,}$)((?=.*\d+)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/", $pass)) {
+                header('location: ../../frontend/login/register.php?fehler=bitte_an_vorschriften_anpassen');
                 exit();
             }
 
-            elseif (!preg_match("/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]/", $nname)) {
-                echo "<script> alert('Error (Nachname): Nur a-z bzw. A-Z erlaubt!')</script>";
-                exit();
-            }
-
-            elseif (!preg_match("/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]/", $vname)) {
-                echo "<script> alert('Error (Vorname): Nur a-z bzw. A-Z erlaubt!')</script>";
-                exit();
-            }
-
-            elseif (!preg_match("/(?=^.{6,}$)((?=.*\d+)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/", $pass)) {
-                echo "<script> alert('Error (Passwort): Nur ASCII-Character von Tastaturen und 6-255 Zeichen erlaubt! Mind. eine Zahl, ein spezielles Zeichen und ein Gross- bzw. ein Kleinbuchstabe erforderlich!')</script>";
-                exit();
-            }
-
-            else {
-                $regmodel = new registermodel();
-                $result = $regmodel->reg($bname, $nname, $vname, $email, $pass);
-                echo '<script>alert("Erfolgreich registriert!")</script>';
-                header("location: ../../frontend/login/register.php?erfolgreich_registriert");
-            }
+            $regmodel = new registermodel();
+            $result = $regmodel->reg($bname, $nname, $vname, $email, $pass);
+            header("location: ../../frontend/login/login.php?success=erfolgreich_registriert");
         }
     }
 }

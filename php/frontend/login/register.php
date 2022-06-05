@@ -1,3 +1,15 @@
+<?php
+if (isset($_GET['fehler'])) {
+    if ($_GET['fehler'] == 'leer') {
+        echo '<script>alert("Alle Felder müssen ausgefüllt sein!")</script>';
+    }
+
+    if ($_GET['fehler'] == 'bitte_an_vorschriften_anpassen') {
+        echo "<script> alert('Error: Bitte passen Sie sich an den Vorschriften an.')</script>";
+    }
+}
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -30,27 +42,27 @@
                                         <h4 class="mb-4 pb-3">Register</h4>
                                         <div class="form-group">
                                             <input name="reg-bname" class="form-style" placeholder="Benutzername"
-                                                   name="reg-bname" autocomplete="off" required="required">
+                                                   autocomplete="off" required="required">
                                             <i class="input-icon uil uil-lock-alt"></i>
                                         </div>
                                         <div class="form-group mt-2">
                                             <input name="reg-nname" class="form-style" placeholder="Nachname"
-                                                   name="reg-nname" autocomplete="off" required="required">
+                                                   autocomplete="off" required="required">
                                             <i class="input-icon uil uil-lock-alt"></i>
                                         </div>
                                         <div class="form-group mt-2">
                                             <input name="reg-vname" class="form-style" placeholder="Vorname"
-                                                   name="reg-vname" autocomplete="off" required="required">
+                                                   autocomplete="off" required="required">
                                             <i class="input-icon uil uil-lock-alt"></i>
                                         </div>
                                         <div class="form-group mt-2">
                                             <input type="email" name="reg-email" class="form-style" placeholder="E-Mail"
-                                                   name="reg-email" autocomplete="off" required="required">
+                                                   autocomplete="off" required="required">
                                             <i class="input-icon uil uil-at"></i>
                                         </div>
                                         <div class="form-group mt-2">
                                             <input type="password" name="reg-pass" class="form-style"
-                                                   placeholder="Passwort" name="reg-pass" autocomplete="off"
+                                                   placeholder="Passwort" autocomplete="off"
                                                    required="required">
                                             <i class="input-icon uil uil-lock-alt"></i>
                                         </div>
