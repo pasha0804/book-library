@@ -1,8 +1,11 @@
 <?php
-include('../backend/view/libraryview.php');
+include('../backend/view/custlistview.php');
 session_start();
+if ($_SESSION['admin'] === NULL) {
+    header("location:../../index.php?kein_zugriff_erlaubt");
+}
+else {
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,7 +22,7 @@ session_start();
 <header>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Library</a>
+            <a class="navbar-brand" href="#">Customers</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -31,26 +34,20 @@ session_start();
                         <a class="nav-link" aria-current="page" href="../../index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Library</a>
+                        <a class="nav-link" aria-current="page" href="library.php">Library</a>
                     </li>
                     <?php
-                        if (isset($_SESSION["admin"])) {
-                            ?>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="custlist.php">Customers</a>
-                            </li>
-                            <?php
-                        }
+                    if (isset($_SESSION["admin"])) {
+                        ?>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Customers</a>
+                        </li>
+                        <?php
+                    }
                     ?>
                 </ul>
                 <div style="padding-right: 0.5em">
-                    <?php
-                    if ($_SESSION == NULL) {
-                        echo '<a href="login/login.php"><button class="btn btn-outline-success">Login</button></a>';
-                    } else {
-                        echo '<a href="../backend/controller/logout.php"><button class="btn btn-outline-danger">Logout</button></a>';
-                    }
-                    ?>
+                    <a href="../backend/controller/logout.php"><button class="btn btn-outline-danger">Logout</button></a>
                 </div>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -63,21 +60,25 @@ session_start();
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">Katalog</th>
-                <th scope="col">Nummer</th>
-                <th scope="col">kurztitel</th>
-                <th scope="col">kategorie</th>
-                <th scope="col">Verkauft</th>
-                <th scope="col">Käufer</th>
-                <th scope="col">Autor</th>
+                <th scope="col">K_ID</th>
+                <th scope="col">Geburtstag</th>
+                <th scope="col">Vorname</th>
+                <th scope="col">Name</th>
+                <th scope="col">Geschlecht</th>
+                <th scope="col">Kunde seit</th>
+                <th scope="col">E-Mail</th>
+                <th scope="col">Knt. per E-Mail</th>
             </tr>
             </thead>
             <tbody>
             <?php
-            $view = new libraryview;
-            $view->b_view();
+            $view = new custlistview;
+            $view->c_view();
             ?>
             </tbody>
         </table>
     </div>
 </body>
+<?php
+}
+?>
