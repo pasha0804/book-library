@@ -7,6 +7,10 @@ if (isset($_GET['fehler'])) {
     if ($_GET['fehler'] == 'bitte_an_vorschriften_anpassen') {
         echo "<script> alert('Error: Bitte passen Sie sich an den Vorschriften an.')</script>";
     }
+
+    if ($_GET['fehler'] == 'email_existiert_bereits') {
+        echo "<script> alert('E-Mail existiert bereits! Bitte verwenden Sie eine andere E-Mail.');</script>";
+    }
 }
 ?>
 

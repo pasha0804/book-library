@@ -17,7 +17,7 @@ class registerctrl extends registermodel {
                 exit();
             }
 
-            if(!preg_match("/^[a-z\d_]{6,}$/i", $bname) && !preg_match("/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]/", $nname) && !preg_match("/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]/", $vname) && !preg_match("/(?=^.{6,}$)((?=.*\d+)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/", $pass)) {
+            if(!preg_match("/(?=^.{2,}$)((?=.*\d+)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/", $bname) && !preg_match("/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]/", $nname) && !preg_match("/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]/", $vname) && !preg_match("/(?=^.{6,}$)((?=.*\d+)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/", $pass)) {
                 header('location: ../../frontend/login/register.php?fehler=bitte_an_vorschriften_anpassen');
                 exit();
             }
