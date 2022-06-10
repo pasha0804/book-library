@@ -27,14 +27,14 @@ session_start();
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="php/backend/controller/libraryctrl.php?ctrl">Library</a>
+                        <a class="nav-link" aria-current="page" href="php/frontend/library/library.php?page=0">Library</a>
                     </li>
                     <?php
                     if (isset($_SESSION["admin"])) {
                         ?>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page"
-                               href="php/frontend/custlist.php">Customers</a>
+                               href="php/frontend/custlist/custlist.php">Customers</a>
                         </li>
                         <?php
                     }

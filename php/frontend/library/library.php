@@ -32,13 +32,13 @@ session_start();
                         <a class="nav-link" aria-current="page" href="../../../index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Library</a>
+                        <a class="nav-link active" aria-current="page" href="?page=0">Library</a>
                     </li>
                     <?php
                         if (isset($_SESSION["admin"])) {
                             ?>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="../custlist.php">Customers</a>
+                                <a class="nav-link" aria-current="page" href="../custlist/custlist.php">Customers</a>
                             </li>
                             <?php
                         }
@@ -53,8 +53,8 @@ session_start();
                     }
                     ?>
                 </div>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex" role="search" method="get" action="../../backend/controller/libraryctrl.php?srch">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="srch">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
@@ -62,36 +62,24 @@ session_start();
     </nav>
     <div class="lib">
         <div class="upper-tbl">
-            <a><button type="button" class="btn btn-light btn-rounded"
+            <form action="../../backend/controller/libraryctrl.php?page= <?php echo $_GET['page']; ?>" name="form-tbl" method="POST">
+                <input type="submit" name="prev" id="prev-btn" value="← Previous" class="btn btn-light btn-rounded"
                     <?php
-                    if (isset($_GET['page'])) {
-                        if ($_GET['page'] == '1') {
-                            ?>
-                            style="display: none"
-                            <?php
+                        if (isset($_GET['page'])) {
+                            if ($_GET['page'] == 0) {
+                                ?>
+                                style="display: none"
+                                <?php
+                            }
                         }
-                    }
-                    ?>>← Previous</button></a>
-            <a href="#"><button type="button" class="btn btn-light btn-rounded">Next →</button></a>
+                    ?>
+                />
+                <input type="submit" name="next" id="next-btn" value="Next →" class="btn btn-light btn-rounded"/>
+            </form>
         </div>
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col"><a href="library.php?btn=nr" onclick="event.preventDefault()">Nummer</a></th>
-                <th scope="col">Katalog</th>
-                <th scope="col">kurztitel</th>
-                <th scope="col">kategorie</th>
-                <th scope="col">Verkauft</th>
-                <th scope="col">Käufer</th>
-                <th scope="col">Autor</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
+        <?php
             $view = new libraryview;
-            $view->lib_view();
-            ?>
-            </tbody>
-        </table>
+            $view->lib_view($_GET['page']);
+        ?>
     </div>
 </body>

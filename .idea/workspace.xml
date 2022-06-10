@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8352fb24-3bfc-43f0-ae1e-4920e285a08a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/backend/controller/libraryctrl.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/backend/controller/libraryctrl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/backend/model/librarymodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/backend/model/librarymodel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/backend/view/libraryview.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/backend/view/libraryview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/frontend/custlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/frontend/custlist/custlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/frontend/library/library.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/frontend/library/library.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2A3tpY5Ayn1FbxSQx8lS8IZETyv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TODO_SCOPE": "All Places",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/xampp/php/php.exe",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\m120\php\frontend\custlist" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8352fb24-3bfc-43f0-ae1e-4920e285a08a" name="Changes" comment="" />
+      <created>1654250286437</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654250286437</updated>
+      <workItem from="1654250290515" duration="1766000" />
+      <workItem from="1654287285450" duration="1000000" />
+      <workItem from="1654288304085" duration="4015000" />
+      <workItem from="1654332456665" duration="9699000" />
+      <workItem from="1654342957187" duration="1439000" />
+      <workItem from="1654354462174" duration="1854000" />
+      <workItem from="1654365532629" duration="1697000" />
+      <workItem from="1654443849178" duration="8696000" />
+      <workItem from="1654528887105" duration="8358000" />
+      <workItem from="1654610494932" duration="660000" />
+      <workItem from="1654627080630" duration="609000" />
+      <workItem from="1654699423043" duration="4283000" />
+      <workItem from="1654865788447" duration="2475000" />
+      <workItem from="1654884233874" duration="7819000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/php/frontend/login/register.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
