@@ -14,3 +14,8 @@ body {
 .lib {
     padding: 3% 3%;
 }
+
+.upper-tbl {
+    float: right;
+    padding-bottom: 2vh;
+}

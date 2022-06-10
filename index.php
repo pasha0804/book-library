@@ -27,7 +27,7 @@ session_start();
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="php/frontend/library.php">Library</a>
+                        <a class="nav-link" aria-current="page" href="php/backend/controller/libraryctrl.php?ctrl">Library</a>
                     </li>
                     <?php
                     if (isset($_SESSION["admin"])) {

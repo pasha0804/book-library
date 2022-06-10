@@ -34,7 +34,7 @@ else {
                         <a class="nav-link" aria-current="page" href="../../index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="library.php">Library</a>
+                        <a class="nav-link" aria-current="page" href="library/library.php">Library</a>
                     </li>
                     <?php
                     if (isset($_SESSION["admin"])) {

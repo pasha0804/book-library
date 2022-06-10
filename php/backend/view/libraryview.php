@@ -1,5 +1,5 @@
 <?php
-include ("../backend/model/librarymodel.php");
+include ("../../backend/model/librarymodel.php");
 
 class libraryview extends librarymodel {
     function lib_view() {

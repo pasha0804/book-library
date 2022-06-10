@@ -29,12 +29,13 @@ class loginctrl extends loginmodel {
                         exit();
                     } else {
                         //return false;
-                        echo '<script>alert("Wrong User Details")</script>';
+                        echo '<script>alert("Error: Login Daten sind falsch!")</script>';
                         header("location:../../frontend/login/login.php");
                     }
                 }
             } else {
-                echo '<script>alert("Wrong User Details")</script>';
+                echo '<script>alert("Error: Login Daten sind falsch!")</script>';
+                header("location:../../frontend/login/login.php");
             }
         }
     }
