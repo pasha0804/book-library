@@ -5,29 +5,30 @@ class libraryctrl extends librarymodel {
     public function lib_ctrl_pages($page = 0) {
         if (isset($_POST['next'])) {
             $page++;
-            if (isset($_POST['srch'])) {
-                $srch = $_POST['srch'];
-                header("location: ../../frontend/library/library.php?srch=$srch&page=$page");
-                exit();
-            }
-            header("location: ../../frontend/library/library.php?page=$page");
+            $cat = $_GET['cat'];
+            $srch = $_GET['srch'];
+            header("location: ../../frontend/library/library.php?srch=$srch&page=$page&cat=$cat");
+            exit();
         }
 
         if (isset($_POST['prev'])) {
             $page--;
-            if (isset($_POST['srch'])) {
-                $srch = $_POST['srch'];
-                header("location: ../../frontend/library/library.php?srch=$srch&page=$page");
-                exit();
-            }
-            header("location: ../../frontend/library/library.php?page=$page");
-        }
-        if (isset($_POST['srch'])) {
-            $srch = $_POST['srch'];
-            header("location: ../../frontend/library/library.php?srch=$srch&page=$page");
+            $cat = $_GET['cat'];
+            $srch = $_GET['srch'];
+            header("location: ../../frontend/library/library.php?srch=$srch&page=$page&cat=$cat");
+            exit();
         }
 
-        
+        if (isset($_POST['srch']) && isset($_POST['cat'])) {
+            $cat = $_POST['cat'];
+            $srch = $_POST['srch'];
+            header("location: ../../frontend/library/library.php?srch=$srch&page=$page&cat=$cat");
+        }
+
+        if (isset($_POST['cat'])) {
+            $cat = $_POST['cat'];
+            header("location: ../../frontend/library/library.php?srch=$srch&page=$page&cat=$cat");
+        }
     }
 }
 

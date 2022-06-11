@@ -3,12 +3,16 @@ include("../../backend/model/librarymodel.php");
 
 class libraryview extends librarymodel
 {
-    function lib_view($page, $srch)
+    function lib_view($page, $srch, $cat)
     {
         $srch = '%' . $srch . '%';
         $page = intval($page);
         $page *= 20;
-        $result = $this->lib_model_tbl($page, $srch);
+        $cat2 = $cat;
+        if ($cat == 0) {
+            $cat2 = 100;
+        }
+        $result = $this->lib_model_tbl($page, $srch, $cat, $cat2);
         ?>
         <h1>Seite:
             <?php

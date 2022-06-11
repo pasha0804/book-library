@@ -36,7 +36,7 @@ session_start();
                         <a class="nav-link" aria-current="page" href="../../../index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="?page=0">Library</a>
+                        <a class="nav-link active" aria-current="page" href="?page=0&srch=&cat=0">Library</a>
                     </li>
                     <?php
                     if (isset($_SESSION["admin"])) {
@@ -76,29 +76,28 @@ session_start();
     </nav>
 </header>
 <div class="lib">
-    <form class="d-flex" role="search" method="post" action="../../backend/controller/libraryctrl.php?<?php if (isset($_GET['srch'])) { echo 'srch=' . $_GET['srch'] . '&'; } ?>page=<?php echo $_GET['page'] ?>"
+    <form class="d-flex" role="search" method="post" action="../../backend/controller/libraryctrl.php"
           style="padding-bottom: 5%">
         <div class="div-form">
             <div class="lib-srch">
                 <h2>Filter</h2>
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="srch">
                 <br/>
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option value="0" selected>Wählen Sie eine Kategorie aus</option>
-                    <option value="1" name="altedrucke">Alte Drucke, Bibeln, Klassische Autoren in den Originalsprachen
-                    </option>
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="cat">
+                    <option value="0" name="default" selected>Wählen Sie eine Kategorie aus</option>
+                    <option value="1" name="altedrucke">Alte Drucke, Bibeln, Klassische Autoren in den Originalsprachen</option>
                     <option value="2" name="geo">Geographie und Reisen</option>
-                    <option value="3" name="gsw">Geschichtswissenschaften</option>
+                    <option value="3" name="gsws">Geschichtswissenschaften</option>
                     <option value="4" name="nws">Naturwissenschaften</option>
                     <option value="5" name="kinder">Kinderbücher</option>
-                    <option value="6" name="moderen">Moderne Literatur und Kunst</option>
-                    <option value="7">Moderne Kunst und K?nstlergraphik</option>
-                    <option value="8">Kunstwissenschaften</option>
-                    <option value="9">Architektur</option>
-                    <option value="10">Technik</option>
-                    <option value="11">Naturwissenschaften - Medizin</option>
-                    <option value="12">Ozeanien</option>
-                    <option value="13">Afrika</option>
+                    <option value="6" name="modlit">Moderne Literatur und Kunst</option>
+                    <option value="7" name="modkunst">Moderne Kunst und K?nstlergraphik</option>
+                    <option value="8" name="kws">Kunstwissenschaften</option>
+                    <option value="9" name="arch">Architektur</option>
+                    <option value="10" name="tech">Technik</option>
+                    <option value="11" name="nwsmed">Naturwissenschaften - Medizin</option>
+                    <option value="12" name="ozean">Ozeanien</option>
+                    <option value="13" name="afrika">Afrika</option>
                 </select>
                 <!--
                 if (isset($_GET['cat'])) {
@@ -115,7 +114,18 @@ session_start();
         </div>
     </form>
     <div class="lib-pages-btn">
-        <form action="../../backend/controller/libraryctrl.php?page= <?php echo $_GET['page']; ?>" name="form-tbl"
+        <form action="../../backend/controller/libraryctrl.php?page=
+        <?php
+        if (isset($_GET['srch'])) {
+            echo 'srch=' . $_GET['srch'] . '&';
+        }
+        if (isset($_GET['page'])) {
+            echo 'page=' . $_GET['page'] . '&';
+        }
+        if(isset($_GET['cat'])) {
+            echo 'cat=' . $_GET['cat'];
+        }
+        ?>" name="form-tbl"
               method="POST">
             <input type="submit" name="prev" id="prev-btn" value="← Previous" class="btn btn-outline-danger"
                 <?php
@@ -152,7 +162,7 @@ session_start();
             $srch = "%";
         }
         $view = new libraryview;
-        $view->lib_view($_GET['page'], $srch);
+        $view->lib_view($_GET['page'], $srch, $_GET['cat']);
         ?>
         </tbody>
     </table>
