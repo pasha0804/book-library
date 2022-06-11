@@ -76,7 +76,7 @@ session_start();
     </nav>
 </header>
 <div class="lib">
-    <form class="d-flex" role="search" method="post" action="../../backend/controller/libraryctrl.php"
+    <form class="d-flex" role="search" method="post" action="../../backend/controller/libraryctrl.php?<?php if (isset($_GET['srch'])) { echo 'srch=' . $_GET['srch'] . '&'; } ?>page=<?php echo $_GET['page'] ?>"
           style="padding-bottom: 5%">
         <div class="div-form">
             <div class="lib-srch">
@@ -84,21 +84,29 @@ session_start();
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="srch">
                 <br/>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option selected>Wählen Sie eine Kategorie aus</option>
-                    <option value="1"></option>
-                    <option value="2"></option>
-                    <option value="3"></option>
-                    <option value="4"></option>
-                    <option value="5"></option>
-                    <option value="6"></option>
-                    <option value="7"></option>
-                    <option value="8"></option>
-                    <option value="9"></option>
-                    <option value="10"></option>
-                    <option value="11"></option>
-                    <option value="12"></option>
-                    <option value="13"></option>
+                    <option value="0" selected>Wählen Sie eine Kategorie aus</option>
+                    <option value="1" name="altedrucke">Alte Drucke, Bibeln, Klassische Autoren in den Originalsprachen
+                    </option>
+                    <option value="2" name="geo">Geographie und Reisen</option>
+                    <option value="3" name="gsw">Geschichtswissenschaften</option>
+                    <option value="4" name="nws">Naturwissenschaften</option>
+                    <option value="5" name="kinder">Kinderbücher</option>
+                    <option value="6" name="moderen">Moderne Literatur und Kunst</option>
+                    <option value="7">Moderne Kunst und K?nstlergraphik</option>
+                    <option value="8">Kunstwissenschaften</option>
+                    <option value="9">Architektur</option>
+                    <option value="10">Technik</option>
+                    <option value="11">Naturwissenschaften - Medizin</option>
+                    <option value="12">Ozeanien</option>
+                    <option value="13">Afrika</option>
                 </select>
+                <!--
+                if (isset($_GET['cat'])) {
+                    $cat = $_GET['cat'];
+                }
+
+                $view->lib_view_cat($cat);
+                -->
             </div>
             <br/>
             <div class="lib-submit">
@@ -123,10 +131,30 @@ session_start();
             <input type="submit" name="next" id="next-btn" value="Next →" class="btn btn-outline-success"/>
         </form>
     </div>
-    <?php
-    $view = new libraryview;
-    $view->lib_view($_GET['page']);
-    //$view->lib_view_srch($_POST);
-    ?>
+    <table class="table table-dark" style="font-size: 75%">
+        <thead>
+        <tr style="color: white" class="table-active">
+            <th scope="col">Nummer</th>
+            <th scope="col">Katalog</th>
+            <th scope="col">kurztitel</th>
+            <th scope="col">kategorie</th>
+            <th scope="col">Verkauft</th>
+            <th scope="col">Käufer</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Details</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+        if (isset($_GET['srch'])) {
+            $srch = $_GET['srch'];
+        } else {
+            $srch = "%";
+        }
+        $view = new libraryview;
+        $view->lib_view($_GET['page'], $srch);
+        ?>
+        </tbody>
+    </table>
 </div>
 </body>
