@@ -8,13 +8,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8352fb24-3bfc-43f0-ae1e-4920e285a08a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/backend/controller/kundenctrl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/frontend/library/book.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd99b462-d062-4d46-9edc-aa4174b0f73c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cd99b462-d062-4d46-9edc-aa4174b0f73c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/backend/controller/libraryctrl.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/backend/controller/libraryctrl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/backend/model/custlistmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/backend/model/kundenmodel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/backend/model/librarymodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/backend/model/librarymodel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/backend/view/custlistview.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/backend/view/kundenview.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/backend/view/libraryview.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/backend/view/libraryview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/frontend/custlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/frontend/custlist/custlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/frontend/custlist/custlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/frontend/kunden/kunden.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/frontend/library/library.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/frontend/library/library.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
+    <list id="11c431d0-1fe6-44f7-8a44-95c0b77574d0" name="Changes by Erebo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,19 +58,21 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/xampp/php/php.exe",
+    "last_opened_file_path": "C:/xampp/htdocs/m120/php/frontend/library",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.editor",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -70,6 +82,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\m120\php\frontend\library" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\m120\php\frontend\custlist" />
     </key>
@@ -95,7 +110,10 @@
       <workItem from="1654627080630" duration="609000" />
       <workItem from="1654699423043" duration="4283000" />
       <workItem from="1654865788447" duration="2475000" />
-      <workItem from="1654884233874" duration="7819000" />
+      <workItem from="1654884233874" duration="17878000" />
+      <workItem from="1654932689145" duration="2772000" />
+      <workItem from="1654935593757" duration="4959000" />
+      <workItem from="1654940826251" duration="9582000" />
     </task>
     <servers />
   </component>

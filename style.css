@@ -2,8 +2,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #C7C1A9;
+    background-color: #1f2029;
     overflow-x: hidden;
+    color: white;
 }
 
 #main-div {
@@ -12,10 +13,78 @@ body {
 }
 
 .lib {
-    padding: 3% 3%;
+    padding: 5% 5%;
 }
 
-.upper-tbl {
+.lib-pages-btn {
     float: right;
     padding-bottom: 2vh;
+}
+
+.lib-srch h2 {
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.div-form {
+    display: block;
+    margin: 0 auto;
+}
+
+.lib-submit {
+    padding-left: 35%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6d6d6d;
+}
+
+.input-border {
+    color: white;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+}
+
+.nav-link {
+    display: inline-block;
+    position: relative;
+    color: #1f2029;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1f2029;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.book-div {
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 25%;
 }

@@ -17,51 +17,61 @@ session_start();
 <header>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">Index</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="php/frontend/library/library.php?page=0">Library</a>
+                        <a class="nav-link active" aria-current="page" href="php/frontend/library/library.php?page=0">Library</a>
                     </li>
                     <?php
                     if (isset($_SESSION["admin"])) {
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page"
-                               href="php/frontend/custlist/custlist.php">Customers</a>
+                            <a class="nav-link" aria-current="page" href="php/frontend/kunden/kunden.php?page=0">Kunden</a>
                         </li>
                         <?php
                     }
                     ?>
                 </ul>
-                <div style="padding-right: 0.5em">
-                    <?php
-                    if ($_SESSION == NULL) {
-                        echo '<a href="php/frontend/login/login.php"><button class="btn btn-outline-success">Login</button></a>';
-                    }
-                    else {
-                        echo '<a href="php/backend/controller/logout.php"><button class="btn btn-outline-danger">Logout</button></a>';
-                    }
-                    ?>
-                </div>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
+            <div style="color: black; padding-right: 1%">
+                <?php
+                if (isset($_SESSION['benutzername']) && $_SESSION['benutzername'] != 1) {
+                    echo "Eingeloggt als: " . $_SESSION['benutzername'];
+                }
+                if (isset($_SESSION['admin']) && $_SESSION['benutzername'] == "1") {
+                    echo "Eingeloggt als: " . $_SESSION['admin'];
+                }
+                if ($_SESSION == NULL) {
+                    echo "Sie sind nicht eingeloggt!";
+                }
+                ?>
+            </div>
+            <div style="padding-right: 0.5em">
+                <?php
+                if ($_SESSION == NULL) {
+                    echo '<a href="../login/login.php"><button class="btn btn-outline-success">Login</button></a>';
+                } else {
+                    echo '<a href="../../backend/controller/logout.php"><button class="btn btn-outline-danger">Logout</button></a>';
+                }
+                ?>
+            </div>
+        </div>
         </div>
     </nav>
 </header>
     <div id="main-div">
         <?php
         if ($_SESSION == NULL) {
-            echo "Sie sind nicht eingeloggt";
+            echo "Hallo Fremder! Willkommen zur Website M120 von Alperen Y. und Connor F.";
         }
         else {
             if (isset($_SESSION['admin'])) {

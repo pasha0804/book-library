@@ -1,8 +1,10 @@
 <?php
 include('../model/librarymodel.php');
 
-class libraryctrl extends librarymodel {
-    public function lib_ctrl_pages($page = 0) {
+class libraryctrl extends librarymodel
+{
+    public function lib_ctrl_pages($page = 0)
+    {
         if (isset($_POST['next'])) {
             $page++;
             header('location: ../../frontend/library/library.php?page=' . $page);
@@ -12,27 +14,18 @@ class libraryctrl extends librarymodel {
             $page--;
             header('location: ../../frontend/library/library.php?page=' . $page);
         }
-    }
-
-    public function lib_ctrl_srch() {
-        if (isset($_GET['srch']) && $_GET['srch'] != '') {
-            $srch = trim($_GET['srch']);
-
-            $query_string = "SELECT * FROM buecher, kategorien WHERE ";
-
-            $keywords = explode('', $srch);
-            foreach ($keywords as $word) {
-                $query_string .= " katalog LIKE '%".$word."%' OR ";
-            }
-            $query_string = substr($query_string, 0, strlen($query_string) - 3);
-
-            echo $query_string;
+        if (isset($_POST['srch'])) {
+            $srch = $_POST['srch'];
+            $srch = preg_replace("#[^0-9a-z]#i", "", $srch);
+            $result = $this->lib_model_srch($srch);
+            $view = new libraryview;
+            $view->lib_view_srch();
+        } else {
+            $view = new libraryview;
+            $view->lib_view($_GET['page']);
         }
     }
 }
 
 $run = new libraryctrl();
 $run->lib_ctrl_pages($_GET['page']);
-
-$run = new libraryctrl();
-$run->lib_ctrl_srch();
