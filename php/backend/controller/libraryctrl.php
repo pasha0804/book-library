@@ -19,14 +19,15 @@ class libraryctrl extends librarymodel {
             exit();
         }
 
-        if (isset($_POST['srch']) && isset($_POST['cat'])) {
+        if (isset($_POST['srch']) || isset($_POST['cat'])) {
             $cat = $_POST['cat'];
             $srch = $_POST['srch'];
             header("location: ../../frontend/library/library.php?srch=$srch&page=$page&cat=$cat");
         }
 
-        if (isset($_POST['cat'])) {
-            $cat = $_POST['cat'];
+        if (isset($_POST['back'])) {
+            $cat = $_GET['cat'];
+            $srch = $_GET['srch'];
             header("location: ../../frontend/library/library.php?srch=$srch&page=$page&cat=$cat");
         }
     }

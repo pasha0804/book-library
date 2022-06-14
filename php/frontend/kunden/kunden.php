@@ -2,7 +2,7 @@
 include('../../backend/view/kundenview.php');
 session_start();
 if ($_SESSION['admin'] === NULL) {
-    header("location:../../index.php?kein_zugriff_erlaubt");
+    header("location:../../../index.php?kein_zugriff_erlaubt");
 } else {
     ?>
     <!doctype html>

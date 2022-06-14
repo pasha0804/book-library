@@ -29,7 +29,7 @@ session_start();
                         <a class="nav-link" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="php/frontend/library/library.php?page=0">Library</a>
+                        <a class="nav-link active" aria-current="page" href="php/frontend/library/library.php?page=0&srch=&cat=0">Library</a>
                     </li>
                     <?php
                     if (isset($_SESSION["admin"])) {
@@ -58,9 +58,9 @@ session_start();
             <div style="padding-right: 0.5em">
                 <?php
                 if ($_SESSION == NULL) {
-                    echo '<a href="../login/login.php"><button class="btn btn-outline-success">Login</button></a>';
+                    echo '<a href="php/frontend/login/login.php"><button class="btn btn-outline-success">Login</button></a>';
                 } else {
-                    echo '<a href="../../backend/controller/logout.php"><button class="btn btn-outline-danger">Logout</button></a>';
+                    echo '<a href="php/backend/controller/logout.php"><button class="btn btn-outline-danger">Logout</button></a>';
                 }
                 ?>
             </div>

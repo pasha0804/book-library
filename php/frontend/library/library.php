@@ -114,7 +114,7 @@ session_start();
         </div>
     </form>
     <div class="lib-pages-btn">
-        <form action="../../backend/controller/libraryctrl.php?page=
+        <form action="../../backend/controller/libraryctrl.php?
         <?php
         if (isset($_GET['srch'])) {
             echo 'srch=' . $_GET['srch'] . '&';
@@ -125,12 +125,11 @@ session_start();
         if(isset($_GET['cat'])) {
             echo 'cat=' . $_GET['cat'];
         }
-        ?>" name="form-tbl"
-              method="POST">
+        ?>" name="form-tbl" method="POST">
             <input type="submit" name="prev" id="prev-btn" value="← Previous" class="btn btn-outline-danger"
                 <?php
                 if (isset($_GET['page'])) {
-                    if ($_GET['page'] == 0) {
+                    if ($_GET['page'] < 1 || $_GET['page'] == NULL) {
                         ?>
                         style="display: none"
                         <?php

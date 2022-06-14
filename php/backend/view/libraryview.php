@@ -21,7 +21,18 @@ class libraryview extends librarymodel
         <?php
         foreach ($result as $item) {
             ?>
-            <form action="../../frontend/library/book.php" method="post">
+            <form action="../../frontend/library/book.php?
+            <?php
+            if (isset($_GET['srch'])) {
+                echo 'srch=' . $_GET['srch'] . '&';
+            }
+            if (isset($_GET['page'])) {
+                echo 'page=' . $_GET['page'] . '&';
+            }
+            if (isset($_GET['cat'])) {
+                echo 'cat=' . $_GET['cat'];
+            }
+            ?>" method="post">
                 <tr>
                     <td><input class="input-border" value="<?php echo $item['nummer']; ?>"
                                name="nummer" readonly="readonly" type="text" style="width: 2.5vw">
@@ -47,7 +58,7 @@ class libraryview extends librarymodel
                     <input class="input-border" type="hidden" value="<?php echo $item['verfasser'] ?>"
                            name="verfasser">
                     <input class="input-border" type="hidden" value="<?php echo $item['zustand'] ?>" name="zustand">
-                    <td><input type="submit" name="ew" value="Details" class="btn btn-info"></td>
+                    <td><input type="submit" name="details-btn" value="Details" class="btn btn-info"></td>
                 </tr>
             </form>
             <?php

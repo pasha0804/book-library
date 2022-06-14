@@ -8,10 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8352fb24-3bfc-43f0-ae1e-4920e285a08a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd99b462-d062-4d46-9edc-aa4174b0f73c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cd99b462-d062-4d46-9edc-aa4174b0f73c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd99b462-d062-4d46-9edc-aa4174b0f73c/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cd99b462-d062-4d46-9edc-aa4174b0f73c/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd99b462-d062-4d46-9edc-aa4174b0f73c/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cd99b462-d062-4d46-9edc-aa4174b0f73c/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd99b462-d062-4d46-9edc-aa4174b0f73c/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cd99b462-d062-4d46-9edc-aa4174b0f73c/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/backend/controller/libraryctrl.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/backend/controller/libraryctrl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/backend/model/librarymodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/backend/model/librarymodel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/backend/view/libraryview.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/backend/view/libraryview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/frontend/kunden/kunden.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/frontend/kunden/kunden.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/frontend/library/book.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/frontend/library/book.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/frontend/library/library.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/frontend/library/library.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +110,9 @@
       <workItem from="1654935593757" duration="4959000" />
       <workItem from="1654940826251" duration="9582000" />
       <workItem from="1654964637555" duration="1234000" />
-      <workItem from="1654970721184" duration="16875000" />
+      <workItem from="1654970721184" duration="16923000" />
+      <workItem from="1655049456550" duration="5979000" />
+      <workItem from="1655123688348" duration="875000" />
     </task>
     <servers />
   </component>
